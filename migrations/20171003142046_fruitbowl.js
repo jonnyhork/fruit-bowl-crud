@@ -3,7 +3,8 @@ exports.up = function(knex, Promise) {
     table.increments()
     table.string('name').notNullable().defaultTo('')
     table.string('color').notNullable().defaultTo('')
-    table.boolean('is_fruit').notNullable().defaultTo('')
+    table.boolean('is_fruit').notNullable().defaultTo(true)
+    table.timestamps(true, true)
   })
 }
 
